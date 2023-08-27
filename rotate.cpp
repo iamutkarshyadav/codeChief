@@ -1,17 +1,16 @@
-#include<vector>
 #include<iostream>
-#include<algorithm>
+#include<vector>
 using namespace std;
-
 class Solution
 {
 public:
-    vector<int> duplicates(int arr[], int n)
+    vector<int> valueEqualToIndex(int arr[], int n)
     {
         // code here
-        vector<int> result;
         for (int i = 0; i < n; i++){
-            arr[arr[i] % n] += n;
+            if (arr[i] == i+1){
+                return {i+1};
+            }
         }
     }
 };
