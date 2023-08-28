@@ -1,16 +1,21 @@
-#include<iostream>
-#include<vector>
-using namespace std;
 class Solution
 {
 public:
-    vector<int> valueEqualToIndex(int arr[], int n)
+    void rotateArr(int arr[], int d, int n)
     {
         // code here
-        for (int i = 0; i < n; i++){
-            if (arr[i] == i+1){
-                return {i+1};
-            }
+        while (start < end)
+        {
+            swap(arr[start], arr[end]);
+            start++;
+            end--;
         }
+    }
+    void rotateArr(int arr[], int d, int n)
+    {
+        d = d % n;
+        reverseArray(arr, 0, d - 1);
+        reverseArray(arr, d, n - 1);
+        reverseArray(arr, 0, n - 1);
     }
 };

@@ -8,6 +8,8 @@ public:
     int thirdLargest(int a[], int n)
     {
         // Your code here
-        sort(a, a + n);
+        for (int i = 0; i < n; i++){
+            
+        }
     }
 };
